@@ -16,6 +16,12 @@ paths['taxonomy_ncbi'] = '/panfs1/cge-servers/SpeciesFinder/scripts/db/taxonomy/
 paths['R'] = '/tools/bin/R-2.12'
 paths['speciesfinder_home'] = '/panfs1/cge-servers/SpeciesFinder/scripts/'
 
+
+''' do nothing, just test if it works on GitHub '''
+def voidFunction():
+   print "hello world"
+
+
 def set_abspath():
    '''Returns absolute path of file to argparse'''
    class SetAbspath(argparse.Action):
@@ -69,7 +75,7 @@ def get_readlengths(i):
       if c > 100: break
    avg = average(read_lengths)
    return int(avg)
-   
+
 
 def assembly_trinity(args):
    '''Performs bwasw alignment of input reads vs. pre-indexed fasta and then trinity assembly on resulting bam-file'''
